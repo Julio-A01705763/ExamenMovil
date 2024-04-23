@@ -24,9 +24,9 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = ninjaAdapter
 
         viewModel.records.observe(this) { records ->
-            ninjaAdapter.updateData(records ?: listOf()) 
+            ninjaAdapter.updateData(records ?: listOf())
+        }
 
         viewModel.getDnsLookup("google.com")
     }
 }
-

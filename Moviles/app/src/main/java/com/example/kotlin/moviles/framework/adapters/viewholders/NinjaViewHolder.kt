@@ -8,9 +8,11 @@ import com.example.kotlin.moviles.data.network.model.NinjaObject
 
 class NinjaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     private val textViewRecordType: TextView = itemView.findViewById(R.id.textViewRecordType)
+    private val textViewValue: TextView = itemView.findViewById(R.id.textViewValue)
 
     fun bind(item: NinjaObject) {
         textViewRecordType.text = item.record_type
-        // Agregar más asignaciones según sea necesario
+        textViewValue.text = item.value ?: "N/A"  // Display "N/A" if value is null
     }
 }
+
